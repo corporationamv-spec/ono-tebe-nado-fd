@@ -1,5 +1,5 @@
 /* ============================================================
-   ФИНАЛЬНАЯ ВЕРСИЯ — ПОЛНОСТЬЮ ГОТОВЫЙ CSS
+   ФИНАЛЬНАЯ ВЕРСИЯ — ВСЕ ОТСТУПЫ И РЕГИСТРЫ УЧТЕНЫ
    ============================================================ */
 
 *,
@@ -156,7 +156,7 @@ a {
   width: 286px;
   text-align: left;
   top: 0;
-  left: 50px;
+  left: 0;
 }
 
 .aligned-text_center {
@@ -171,11 +171,11 @@ a {
   width: 387px;
   text-align: right;
   top: 270px;
-  right: 50px;
+  right: 0;
 }
 
 .letter-spacing-extended {
-  letter-spacing: 60px;
+  letter-spacing: 30px;
 }
 
 .no-letter-spacing {
@@ -220,7 +220,7 @@ a {
 }
 
 /* ============================================================
-   ЛОТЫ
+   ЛОТЫ (ОБНОВЛЕННЫЕ ОТСТУПЫ)
    ============================================================ */
 
 .lots {
@@ -234,9 +234,9 @@ a {
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
-  line-height: 1;           /* 100% */
-  letter-spacing: 0;        /* 0% */
-  margin: 0 0 27px 40px;    /* слева 40px, снизу 27px */
+  line-height: 1;
+  letter-spacing: 0;
+  margin: 0 0 27px 40px; /* Отступ слева 40px, как в Figma */
 }
 
 .lots__card-list {
@@ -267,7 +267,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: 50px 40px;
+  padding: 48px 40px 20px 40px; /* Top 48px, Left 40px - строго по макету */
   background-size: cover;
   background-position: center;
 }
@@ -289,8 +289,11 @@ a {
   z-index: 1;
   font-size: 22px;
   font-weight: 700;
+  text-transform: uppercase; /* Исправлено: теперь всегда заглавные */
   text-decoration: underline;
   text-underline-offset: 4px;
+  line-height: 1.2; /* 120% как в Figma */
+  max-width: 254px; /* Ширина заголовка, ограниченная скриншотом */
   margin: 0 0 20px 0;
 }
 
@@ -435,7 +438,7 @@ a {
 }
 
 /* ============================================================
-   АДАПТИВ ДЛЯ 1100px
+   АДАПТИВ
    ============================================================ */
 
 @media (max-width: 1100px) {
@@ -444,12 +447,10 @@ a {
     height: auto;
     padding: 40px 20px 0 20px;
   }
-
   .header__menu {
     margin-top: 0;
     height: auto;
   }
-
   .header__address {
     margin-top: 0;
     height: auto;
@@ -460,7 +461,6 @@ a {
     min-height: 500px;
     padding: 80px 20px 30px 20px;
   }
-
   .cover__title {
     width: 100%;
     height: auto;
@@ -469,7 +469,6 @@ a {
     flex-direction: column;
     align-items: center;
   }
-
   .aligned-text {
     position: static;
     height: auto;
@@ -482,11 +481,9 @@ a {
     right: auto !important;
     top: auto !important;
   }
-
   .aligned-text:first-child {
     margin-top: 0 !important;
   }
-
   .cover__description {
     width: 100%;
     height: auto;
@@ -495,7 +492,6 @@ a {
     align-items: stretch;
     margin-top: 30px;
   }
-
   .bet-button {
     width: 100%;
     text-align: center;
@@ -507,17 +503,14 @@ a {
     margin-top: 120px;
     padding: 0 20px 30px 20px;
   }
-
   .lots__heading {
-    margin-left: 0; /* на маленьких экранах убираем отступ */
+    margin-left: 0;
   }
-
   .lots__card-list {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 40px;
   }
-
   .lots__card-list-item {
     width: 100%;
     max-width: 334px;
@@ -532,17 +525,14 @@ a {
     grid-template-columns: 1fr;
     padding: 30px 20px;
   }
-
   .about__logo {
     width: 160px;
     height: 160px;
   }
-
   .about__logo-image {
     width: 100px;
     height: 70px;
   }
-
   .about__title {
     margin-top: 30px;
   }
@@ -556,38 +546,28 @@ a {
     justify-items: center;
     padding: 30px 20px;
   }
-
   .footer__address {
     align-items: center;
   }
-
   .footer__social-list {
     justify-self: center;
   }
 }
 
-/* ============================================================
-   АДАПТИВ ДЛЯ МАЛЕНЬКИХ ЭКРАНОВ
-   ============================================================ */
-
 @media (max-width: 480px) {
   .cover__title {
     font-size: 40px;
   }
-
   .letter-spacing-extended {
     letter-spacing: 0;
   }
-
   .bet-button {
     width: 100%;
     text-align: center;
   }
-
   .lots__card-list-item {
     min-height: 300px;
   }
-
   .footer__social-list {
     gap: 20px;
   }
