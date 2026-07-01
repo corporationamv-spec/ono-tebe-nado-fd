@@ -1,20 +1,6 @@
 /* ============================================================
-   ОБЩИЕ НАСТРОЙКИ
+   ОБЩИЕ НАСТРОЙКИ (дополнительные, глобальные уже в global.css)
    ============================================================ */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  max-width: 1440px;
-  margin: 0 auto;
-  font-family: "Raleway", sans-serif;
-  background-color: #ffffff;
-  color: #000000;
-}
 
 a {
   text-decoration: none;
@@ -96,7 +82,7 @@ a {
 }
 
 /* ============================================================
-   ОБЛОЖКА (COVER)
+   ОБЛОЖКА (COVER) – с правильным позиционированием слов
    ============================================================ */
 
 .cover {
@@ -123,7 +109,7 @@ a {
   font-weight: 700;
   letter-spacing: 30px;
   text-transform: uppercase;
-  margin: 0 0 50px 0;
+  margin: 0;
 }
 
 .aligned-text {
@@ -133,10 +119,12 @@ a {
 
 .aligned-text_center {
   text-align: center;
+  margin-top: 135px;   /* ← отступ для "ТЕБЕ" */
 }
 
 .aligned-text_right {
   text-align: right;
+  margin-top: 135px;   /* ← отступ для "НАДО" */
 }
 
 .letter-spacing-extended {
@@ -182,12 +170,12 @@ a {
 }
 
 /* ============================================================
-   ЛОТЫ
+   ЛОТЫ – карточки всегда в одну строку
    ============================================================ */
 
 .lots {
   padding: 50px 50px 40px 50px;
-  margin-top: 180px;  /* ← ОТСТУП ОТ ОБЛОЖКИ ДО ЛОТОВ */
+  margin-top: 180px;   /* ← отступ от обложки */
 }
 
 .lots__heading {
@@ -276,7 +264,7 @@ a {
   grid-template-columns: 334px 1fr;
   gap: 25px;
   padding: 50px 50px 80px 50px;
-  margin-top: 120px;  /* ← ОТСТУП ОТ ЛОТОВ ДО ОБ АУКЦИОНЕ */
+  margin-top: 120px;   /* ← отступ от лотов */
 }
 
 .about__column {
@@ -330,7 +318,7 @@ a {
   grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
   padding: 30px 50px 60px 50px;
-  margin-top: 180px;  /* ← ОТСТУП ОТ ОБ АУКЦИОНЕ ДО ПОДВАЛА */
+  margin-top: 180px;   /* ← отступ от секции об аукционе */
 }
 
 .footer__address {
@@ -387,28 +375,10 @@ a {
 }
 
 /* ============================================================
-   МЕДИА-ЗАПРОС ДЛЯ 1100px
+   АДАПТИВ ДЛЯ 1100px (сохраняем отступы между секциями)
    ============================================================ */
 
 @media (max-width: 1100px) {
-  .lots {
-    margin-top: 180px;
-  }
-
-  .about {
-    margin-top: 120px;
-  }
-
-  .footer {
-    margin-top: 180px;
-  }
-
-  .lots__card-list-item {
-    flex: 1 1 0;
-    min-width: 0;
-    min-height: 596px;
-  }
-
   .cover__title {
     font-size: 80px;
     letter-spacing: 20px;
@@ -420,6 +390,21 @@ a {
 
   .cover__description {
     gap: 50px;
+  }
+
+  .cover__description-text {
+    font-size: 20px;
+    word-spacing: 14px;
+  }
+
+  .lots__card-list-item {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 596px;
+  }
+
+  .card__text {
+    font-size: 18px;
   }
 
   .about {
@@ -445,5 +430,18 @@ a {
 
   .about__text p {
     font-size: 18px;
+  }
+
+  /* Отступы между секциями на 1100px остаются теми же */
+  .lots {
+    margin-top: 180px;
+  }
+
+  .about {
+    margin-top: 120px;
+  }
+
+  .footer {
+    margin-top: 180px;
   }
 }
