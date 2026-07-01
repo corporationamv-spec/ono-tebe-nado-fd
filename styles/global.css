@@ -37,7 +37,6 @@ button {
   font: inherit;
 }
 
-/* ===== ОВЕРЛЕЙ ===== */
 .overlay {
   position: absolute;
   inset: 0;
