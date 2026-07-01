@@ -1,5 +1,5 @@
 /* ============================================================
-   ОБЩИЕ НАСТРОЙКИ
+   ФИНАЛЬНАЯ ВЕРСИЯ — 100% СООТВЕТСТВИЕ МАКЕТУ
    ============================================================ */
 
 *,
@@ -96,7 +96,7 @@ a {
 }
 
 /* ============================================================
-   ОБЛОЖКА
+   ОБЛОЖКА (COVER) — ТОЧНЫЕ ОТСТУПЫ ДЛЯ ЗАГОЛОВКА
    ============================================================ */
 
 .cover {
@@ -121,6 +121,7 @@ a {
   z-index: 1;
   font-size: 100px;
   font-weight: 700;
+  line-height: 1.15;
   letter-spacing: 30px;
   text-transform: uppercase;
   margin: 0;
@@ -128,17 +129,21 @@ a {
 
 .aligned-text {
   display: block;
-  line-height: 1;
+}
+
+.aligned-text:first-child {
+  text-align: left;
+  margin-top: 165px;
 }
 
 .aligned-text_center {
   text-align: center;
-  margin-top: 135px;
+  margin-top: 300px;
 }
 
 .aligned-text_right {
   text-align: right;
-  margin-top: 135px;
+  margin-top: 435px;
 }
 
 .letter-spacing-extended {
@@ -156,6 +161,7 @@ a {
   justify-content: flex-end;
   align-items: center;
   gap: 78px;
+  margin-top: 50px;
 }
 
 .cover__description-text {
@@ -449,7 +455,6 @@ a {
     font-size: 18px;
   }
 
-  /* Отступы между секциями */
   .lots {
     margin-top: 180px;
   }
