@@ -8,8 +8,14 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
   font-family: "Raleway", sans-serif;
   background-color: #ffffff;
@@ -30,6 +36,7 @@ a {
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   width: 1100px;
+  max-width: 100%;
   height: 293px;
   padding: 0 50px;
   margin: 0 auto;
@@ -116,6 +123,7 @@ a {
 .cover {
   position: relative;
   width: 1100px;
+  max-width: 100%;
   min-height: 757px;
   margin: 0 auto;
   padding: 165px 50px 50px 50px;
@@ -137,10 +145,11 @@ a {
   position: relative;
   z-index: 1;
   width: 1000px;
+  max-width: 100%;
   height: 385px;
   margin: 0 auto;
-  display: block; 
-} /* Исправлено: скобка на новой строке, чтобы не было ошибки линтера */
+  display: block;
+}
 
 .aligned-text {
   position: absolute;
@@ -187,6 +196,7 @@ a {
   position: relative;
   z-index: 1;
   width: 1000px;
+  max-width: 100%;
   height: 51px;
   margin: 106px auto 0;
   display: flex;
@@ -226,6 +236,7 @@ a {
 
 .lots {
   width: 1052px;
+  max-width: 100%;
   min-height: 723px;
   margin: 180px auto 0;
   padding: 0 0 40px 0;
@@ -320,6 +331,7 @@ a {
 
 .about {
   width: 1052px;
+  max-width: 100%;
   min-height: 595px;
   margin: 120px auto 0;
   padding: 50px 50px 80px 50px;
@@ -377,6 +389,7 @@ a {
 
 .footer {
   width: 1100px;
+  max-width: 100%;
   height: 180px;
   margin: 180px auto 0;
   display: grid;
@@ -438,12 +451,10 @@ a {
   object-fit: contain;
 }
 
-
 /* ============================================================
-   АДАПТИВНОСТЬ (ИСПРАВЛЕННАЯ)
+   АДАПТИВНОСТЬ (БЕЗ ОШИБОК)
    ============================================================ */
 
-/* Планшеты и небольшие ноутбуки (ширина МЕНЕЕ 1100px, включая 1099px и меньше) */
 @media (max-width: 1099px) {
   .header {
     width: 100%;
@@ -453,12 +464,14 @@ a {
     gap: 20px;
     justify-items: center;
   }
+
   .header__menu {
     margin-top: 0;
     height: auto;
     width: 100%;
     justify-content: center;
   }
+
   .header__address {
     margin-top: 0;
     height: auto;
@@ -471,6 +484,7 @@ a {
     min-height: auto;
     padding: 60px 20px 30px 20px;
   }
+
   .cover__title {
     width: 100%;
     height: auto;
@@ -479,26 +493,30 @@ a {
     flex-direction: column;
     align-items: center;
   }
+
   .aligned-text {
     position: static;
     height: auto;
     line-height: 1.15;
-    width: auto !important;
-    text-align: center !important;
-    margin: 20px 0 0 0 !important;
-    transform: none !important;
-    left: auto !important;
-    right: auto !important;
-    top: auto !important;
+    width: auto;
+    text-align: center;
+    margin: 20px 0 0 0;
+    transform: none;
+    left: auto;
+    right: auto;
+    top: auto;
     font-size: 64px;
     letter-spacing: 15px;
   }
+
   .aligned-text:first-child {
-    margin-top: 0 !important;
+    margin-top: 0;
   }
+
   .letter-spacing-extended {
-    letter-spacing: 30px !important;
+    letter-spacing: 30px;
   }
+
   .cover__description {
     width: 100%;
     height: auto;
@@ -507,10 +525,12 @@ a {
     align-items: stretch;
     margin-top: 40px;
   }
+
   .cover__description-text {
     text-align: center;
     word-spacing: 10px;
   }
+
   .bet-button {
     width: 100%;
     text-align: center;
@@ -522,15 +542,18 @@ a {
     margin-top: 120px;
     padding: 0 20px 40px 20px;
   }
+
   .lots__heading {
     margin-left: 0;
     text-align: center;
   }
+
   .lots__card-list {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 40px;
   }
+
   .lots__card-list-item {
     width: 100%;
     max-width: 334px;
@@ -545,14 +568,17 @@ a {
     grid-template-columns: 1fr;
     padding: 30px 20px;
   }
+
   .about__logo {
     width: 160px;
     height: 160px;
   }
+
   .about__logo-image {
     width: 100px;
     height: 70px;
   }
+
   .about__title {
     margin-top: 30px;
     text-align: center;
@@ -567,31 +593,33 @@ a {
     justify-items: center;
     padding: 30px 20px;
   }
+
   .footer__address {
     align-items: center;
     text-align: center;
   }
+
   .footer__social-list {
     justify-self: center;
   }
 }
 
-/* Маленькие планшеты и смартфоны (до 768px) */
 @media (max-width: 768px) {
   .aligned-text {
     font-size: 48px;
     letter-spacing: 10px;
-    margin: 15px 0 0 0 !important;
+    margin: 15px 0 0 0;
   }
+
   .letter-spacing-extended {
-    letter-spacing: 20px !important;
+    letter-spacing: 20px;
   }
-  
+
   .cover__description-text {
     font-size: 18px;
     word-spacing: 8px;
   }
-  
+
   .bet-button {
     font-size: 18px;
   }
@@ -599,25 +627,28 @@ a {
   .lots__heading {
     font-size: 32px;
   }
-  
+
   .lots__card-list-item {
     max-width: 100%;
   }
-  
+
   .card {
     padding: 30px 20px 20px 20px;
     min-height: 350px;
   }
+
   .card__title {
     font-size: 18px;
   }
+
   .card__text {
     font-size: 16px;
   }
-  
+
   .about__title {
     font-size: 32px;
   }
+
   .about__text p {
     font-size: 16px;
   }
@@ -625,12 +656,12 @@ a {
   .footer {
     gap: 20px;
   }
+
   .footer__social-list {
     gap: 30px;
   }
 }
 
-/* Совсем маленькие экраны (до 480px) */
 @media (max-width: 480px) {
   .header__links-list {
     flex-wrap: wrap;
@@ -640,10 +671,10 @@ a {
 
   .aligned-text {
     font-size: 36px;
-    letter-spacing: 0 !important;
-    margin: 10px 0 0 0 !important;
+    letter-spacing: 0;
+    margin: 10px 0 0 0;
   }
-  
+
   .cover__description-text {
     font-size: 14px;
     word-spacing: normal;
@@ -657,18 +688,20 @@ a {
   .lots__heading {
     font-size: 24px;
   }
-  
+
   .card__title {
     font-size: 16px;
   }
+
   .card__text {
     font-size: 14px;
   }
-  
+
   .about__title {
     font-size: 24px;
     margin-top: 20px;
   }
+
   .about__text p {
     font-size: 14px;
   }
